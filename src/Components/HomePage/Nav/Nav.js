@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Customhook from '../../Custom hooks/Customhook';
 
 import Hero from '../Heropart/Hero';
+import Home from '../Home/Home';
 import Products from '../Products/Products';
 
 
@@ -43,9 +44,9 @@ const Nav = () => {
                                 
                                 <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal "  to='/'> Home </NavLink>
 
-                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal "  to='/Manage'> Manage</NavLink>
+                                <Link className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal"  to='/Manage'> Manage</Link>
 
-                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Add-products'>Add products </NavLink>
+                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal"  to='/Add-products'>Add products</NavLink>
 
                                 <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal "  to='/My-products'>My products </NavLink>
 
@@ -358,15 +359,7 @@ const Nav = () => {
                 {/* Code block ends */}
             </div>
 
-        {/* Heroo banner */}
-
-        <div className='mt-6'>
-            <Hero></Hero>
-        </div>
-
-       <div>
-          <Products></Products>
-       </div>
+        
 
         </>   
 

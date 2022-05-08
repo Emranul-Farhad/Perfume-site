@@ -8,7 +8,7 @@ useEffect( ()=> {
     fetch('products.json')
     .then(res => res.json())
     .then(data => setProducts(data))
-}, [])
+}, [setProducts])
 
     return (
        [products, setProducts]
@@ -16,3 +16,4 @@ useEffect( ()=> {
 };
 
 export default Customhook;
+
