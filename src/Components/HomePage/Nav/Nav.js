@@ -10,9 +10,10 @@ const Nav = () => {
     
     const [show, setShow] = useState(null);
     const [profile, setProfile] = useState(false);
+
     return (
         <>
-            <div className=" h-full w-full">
+            <div className=" h-full w-full ">
                 {/* Code block starts */}
                 <nav className="w-full mx-auto hidden xl:block bg-gray-800 shadow">
                     <div className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
@@ -105,8 +106,8 @@ const Nav = () => {
                                                 </li>
                                             </ul>
                                         )}
-                                        <img className="rounded h-10 w-10 object-cover" src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png" alt="logo" />
-                                        <p className="text-white text-sm ml-2">Jane Doe</p>
+                                        {/* <img className="rounded h-10 w-10 object-cover" src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png" alt="logo" /> */}
+                                        {/* <p className="text-white text-sm ml-2">Jane Doe</p> */}
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +167,7 @@ const Nav = () => {
                                         <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
                                         <path d="M7 12h14l-3 -3m0 6l3 -3" />
                                     </svg>
-                                    <span className="ml-2">Sign out</span>
+                                    {/* <span className="ml-2">Sign out</span> */}
                                 </li>
                             </ul>
                         </div>
