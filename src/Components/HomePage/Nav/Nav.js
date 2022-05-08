@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Hero from '../Heropart/Hero';
 
 
 
@@ -29,7 +30,7 @@ const Nav = () => {
                                 {/* <img src="https://www.doctime.com.bd/images/logo/doctime_title_logo_tm.svg" alt="" /> */}
                                 {/* <NavLink className="text-base text-1xl  text-white font-bold tracking-normal leading-tight ml-3 hidden lg:block"> Doctor's Time</NavLink> */}
 
-                                <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white  tracking-normal "  to='/'> Doctors'Time</NavLink>
+                                <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white  tracking-normal "  to='/'> Fashion's Time</NavLink>
 
                             </div>
 
@@ -38,9 +39,9 @@ const Nav = () => {
                                 
                                 <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/'> Home </NavLink>
 
-                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'> Doctors </NavLink>
+                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'> Manage</NavLink>
 
-                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Aboubt-us'> About Us </NavLink>
+                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Aboubt-us'>Add products </NavLink>
 
                                 <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/login'> Login </NavLink>
 
@@ -95,12 +96,12 @@ const Nav = () => {
                                                     <span className="ml-2">Help Center</span>
                                                 </li>
                                                 <li className="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-settings" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                    {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-settings" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                         <path stroke="none" d="M0 0h24v24H0z" />
                                                         <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                                                         <circle cx={12} cy={12} r={3} />
-                                                    </svg>
-                                                    <span className="ml-2">Account Settings</span>
+                                                    </svg> */}
+                                                    {/* <span className="ml-2">Account Settings</span> */}
                                                 </li>
                                             </ul>
                                         )}
@@ -140,7 +141,7 @@ const Nav = () => {
                                         <div className="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
                                             <img className="rounded h-10 w-10 object-cover" src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png" alt="logo" />
                                         </div>
-                                        <p className="text-sm ml-2 cursor-pointer">Jane Doe</p>
+                                        {/* <p className="text-sm ml-2 cursor-pointer">Jane Doe</p> */}
                                         <div className="sm:ml-2 text-white relative">
                                             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down cursor-pointer" width={20} height={20} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" />
@@ -218,7 +219,7 @@ const Nav = () => {
                                                         />
                                                     </svg> */}
                                                     {/* <p className="text-base  text-white ml-3">Doctor's Home</p> */}
-                                                    <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/'> Doctor'Home </NavLink>
+                                                    <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/'>Fashion's Time </NavLink>
 
                                                 </div>
                                                 <div id="cross" className="text-white" onClick={() => setShow(!show)}>
@@ -260,7 +261,7 @@ const Nav = () => {
                                                             </div>
                                                             {/* <p className="text-white xl:text-base  text-base ml-3">Products</p> */}
                                                             
-                                <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Aboubt-us'> About Us </NavLink>
+                                <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Aboubt-us'> Manage </NavLink>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -276,7 +277,7 @@ const Nav = () => {
                                                             </svg>
                                                         </div>
                                                         {/* <p className="text-white xl:text-base  text-base ml-3">Performance</p> */}
-                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'> Doctors </NavLink>
+                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'>Add Products </NavLink>
                                                     </div>
                                                 </li>
                                             </a>
@@ -284,15 +285,15 @@ const Nav = () => {
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-white">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                            {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" />
                                                                 <polyline points="7 8 3 12 7 16" />
                                                                 <polyline points="17 8 21 12 17 16" />
                                                                 <line x1={14} y1={4} x2={10} y2={20} />
-                                                            </svg>
+                                                            </svg> */}
                                                         </div>
                                                         {/* <p className="text-white xl:text-base  text-base ml-3">Deliverables</p> */}
-                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'> Faq </NavLink>
+                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'> Login </NavLink>
 
                                                     </div>
                                                 </div>
@@ -315,26 +316,26 @@ const Nav = () => {
                                         <div className="border-t border-gray-700">
                                             <div className="w-full flex items-center justify-between pt-1">
                                                 <div className="flex items-center">
-                                                    <img alt="profile-pic" src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png" className="w-8 h-8 rounded-md" />
-                                                    <p className=" text-white text-base leading-4 ml-2">Jane Doe</p>
+                                                    {/* <img alt="profile-pic" src="https://tuk-cdn.s3.amazonaws.com/assets/components/boxed_layout/bl_1.png" className="w-8 h-8 rounded-md" /> */}
+                                                    {/* <p className=" text-white text-base leading-4 ml-2">Jane Doe</p> */}
                                                 </div>
                                                 <ul className="flex">
                                                     <li className="cursor-pointer text-white pt-5 pb-3">
                                                         <div className="w-6 h-6 md:w-8 md:h-8">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-messages" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                            {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-messages" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" />
                                                                 <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
                                                                 <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
-                                                            </svg>
+                                                            </svg> */}
                                                         </div>
                                                     </li>
                                                     <li className="cursor-pointer text-white pt-5 pb-3 pl-3">
                                                         <div className="w-6 h-6 md:w-8 md:h-8">
-                                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bell" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                                            {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bell" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                                 <path stroke="none" d="M0 0h24v24H0z" />
                                                                 <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
                                                                 <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-                                                            </svg>
+                                                            </svg> */}
                                                         </div>
                                                     </li>
                                                 </ul>
@@ -350,6 +351,13 @@ const Nav = () => {
 
                 {/* Code block ends */}
             </div>
+
+        {/* Heroo banner */}
+
+        <div className='mt-6'>
+            <Hero></Hero>
+        </div>
+
         </>   
 
 )
