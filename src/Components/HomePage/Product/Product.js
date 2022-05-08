@@ -1,5 +1,8 @@
 import React from 'react';
 import './Product.css'
+import {AiFillHeart} from 'react-icons/ai'
+import { Link } from 'react-router-dom';
+import {FaShoppingCart} from 'react-icons/fa'
 
 const Product = (props) => {
 const {description, img, quantity, supplierName, price, Name} = props.product
@@ -9,17 +12,17 @@ const {description, img, quantity, supplierName, price, Name} = props.product
             	<div class="product-card">
 		<div class="badge">Hot</div>
 		<div class="product-tumb">
-			<img src="" alt=""/>
+			<img src={img} alt=""/>
 		</div>
 		<div class="product-details">
-			<span class="product-catagory">Women,bag</span>
-			<h4><a href="">Women leather bag</a></h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+			<span class="product-catagory"> {supplierName} </span>
+			<h4><a href=""> {Name} </a></h4>
+			<p title={description} className='cursor-pointer' > {description.slice(0, 100)+"..."  } </p>
 			<div class="product-bottom-details">
-				<div class="product-price"><small>$96.00</small>$230.99</div>
+				<div class="product-price"><small> </small> $ {price} </div>
 				<div class="product-links">
-					<a href=""><i class="fa fa-heart"></i></a>
-					<a href=""><i class="fa fa-shopping-cart"></i></a>
+					<Link to='/'> <AiFillHeart></AiFillHeart> </Link>
+					<Link to='/' > <FaShoppingCart></FaShoppingCart> </Link>
 				</div>
 			</div>
 		</div>

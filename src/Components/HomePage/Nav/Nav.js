@@ -18,7 +18,7 @@ const Nav = () => {
         <>
             <div className=" h-full w-full ">
                 {/* Code block starts */}
-                <nav className="w-full mx-auto hidden xl:block bg-gray-800 shadow">
+                <nav className="w-full mx-auto hidden xl:block bg-gray-800 shadow  fixed top-0 z-50  ">
                     <div className="container px-6 justify-between h-16 flex items-center lg:items-stretch mx-auto">
                         <div className="h-full flex items-center">
                             <div className="mr-10 flex items-center">
@@ -41,11 +41,13 @@ const Nav = () => {
                             <ul className="pr-12 xl:flex items-center h-full hidden">
                                 {/* <Link  className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal border-b-2 border-white"> Dashboard </Link> */}
                                 
-                                <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/'> Home </NavLink>
+                                <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal "  to='/'> Home </NavLink>
 
-                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Doctors'> Manage</NavLink>
+                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal "  to='/Manage'> Manage</NavLink>
 
-                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Aboubt-us'>Add products </NavLink>
+                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/Add-products'>Add products </NavLink>
+
+                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal "  to='/My-products'>My products </NavLink>
 
                                 <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal "  to='/login'> Login </NavLink>
 
