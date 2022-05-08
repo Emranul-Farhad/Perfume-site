@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import Customhook from '../../Custom hooks/Customhook';
+
 import Hero from '../Heropart/Hero';
+import Products from '../Products/Products';
 
 
 
@@ -358,6 +361,10 @@ const Nav = () => {
         <div className='mt-6'>
             <Hero></Hero>
         </div>
+
+       <div>
+          <Products></Products>
+       </div>
 
         </>   
 
