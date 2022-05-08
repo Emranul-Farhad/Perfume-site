@@ -8,7 +8,7 @@ console.log(products);
 
     return (
         <div className='pt-20'>
-            <div>
+            <div >  
                 {
                     products.map(manageP => <Manage manage={manageP} ></Manage>)
                 }
