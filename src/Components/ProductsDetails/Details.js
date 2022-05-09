@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 
 
@@ -14,6 +15,63 @@ const Details = () => {
             .then(res => res.json())
             .then(data => setSingelProduct(data))
     }, [id])
+
+
+   const handleDelivere = ()=> {
+       if(singelproduct.quantity === 0 ){
+         return  toast.error('cannot decrase value')
+       }
+     
+       const url = (`http://localhost:8000/productupdate/${id}`)
+       fetch(url)
+       .then(res => res.json())
+       .then(data => {
+           if(data.modifiedCount === 1 ){
+            setSingelProduct({
+                ...singelproduct, quantity: + singelproduct.quantity-1
+            })
+           }
+       } )
+    
+    }
+
+
+    // update quantit
+
+    const handleAddStock = (event) => {
+		event.preventDefault()
+		const quantity = +event.target.quantity.value
+        console.log(quantity);
+        const url = `http://localhost:8000/update/${singelproduct._id}`
+        console.log(url);
+		fetch(
+			url,
+			{
+				headers: {
+					// "content-type": "application/json",
+                    'Content-Type': 'application/json'
+					
+				},
+                body: JSON.stringify({quantity}),
+				method: "POST",
+			}
+		)
+		
+           .then (res => res.json())
+			.then((data) => {
+				if (data.modifiedCount > 0) {
+					event.target.reset()
+					setSingelProduct({ ...singelproduct, quantity: + singelproduct.quantity + quantity })
+					toast.success(`${quantity} more car added to stock.`)
+				}
+			})
+	}
+
+
+
+
+
+
 
     return (
         <div className='pt-20'>
@@ -52,13 +110,13 @@ const Details = () => {
                                 <p className="text-base leading-4 mt-4 text-green-600">
                                     Supplier : {singelproduct?.supplierName}
                                 </p>
-                                <p className="text-base leading-4 mt-4 text-red-600">
+                                <p className="text-base leading-4 mt-4 mb-2 text-red-600">
                                     Price: ${singelproduct?.price}
                                 </p>
                                 <div className="flex justify-center">
                                     {singelproduct.quantity > 0 && (
                                         <button
-                                            // onClick={handleDelivere}
+                                            onClick={handleDelivere}
                                             className="text-white bg-[#FEA14B] hover:bg-[#FEA14B]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2"
                                         >
                                             Delivered
@@ -66,8 +124,8 @@ const Details = () => {
                                     )}
                                 </div>
                                 <form
-                                    className=" mt-6 py-2 px-6 rounded-lg bg-slate-100 dark:bg-gray-800 grid"
-                                // onSubmit={handleAddStock}
+                                    className=" mt-6 py-2 px-6 rounded-lg  grid"
+                                onSubmit={handleAddStock}
                                 >
                                     <label
                                         htmlFor="stock"
@@ -77,7 +135,7 @@ const Details = () => {
                                     </label>
                                     <input
                                         type="number"
-                                        name="stock"
+                                        name="quantity"
                                         min={0}
                                         className="h-10  rounded dark:bg-slate-500"
                                         id="addItem"

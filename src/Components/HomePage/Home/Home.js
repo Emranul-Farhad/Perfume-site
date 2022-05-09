@@ -17,10 +17,6 @@ const Home = () => {
                 <Products></Products>
             </div>
 
-{/* home page with prodcuts details */}
-          <div>
-              <ProductsHalfs></ProductsHalfs>
-          </div>
 
         </div>
     );

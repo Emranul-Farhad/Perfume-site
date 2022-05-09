@@ -143,6 +143,9 @@ const Login = () => {
                             <p style={{ color: 'red' }} > {errors} </p>
                             <button className='loginButton' >Sign up</button>
                         </form>
+{/* google sign in */}
+                        <button className='mb-3 googlesignin'>Sign with google</button>
+
                     </div>
 
                     <div className="login">
@@ -159,10 +162,10 @@ const Login = () => {
                         </form>
                     </div>
                 </div>
-
-         
             </div>
 
+           <button>  </button>
+           
         </div>
 
 

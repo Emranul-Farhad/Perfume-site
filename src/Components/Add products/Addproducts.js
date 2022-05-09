@@ -1,23 +1,55 @@
 import React from 'react';
 import './Addproducts.css'
+
+
+
+
+
+
+
 const Addproducts = () => {
 
+    const hanedelsubmit = event => {
+        console.log(event.target);
+        event.preventDefault()
+        const data = { 
+            img: event.target.img.value,
+             Name: event.target.Name.value ,
+             price: event.target.price.value , 
+             supplierName: event.target.supplierName.value,
+              quantity:event.target.quantity.value,
+              description: event.target.description.value
+            }
 
-    
+        console.log(event.target.img.value,);
+        const url = `http://localhost:8000/product`
+        console.log(url);
+        fetch(url, {
+            method: 'POST', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json(data))
+            .then(data => {
+                console.log('Success:', data);
+            })
+    }
+
     return (
         <div className='mt-16'>
-
         <h1 className='pt-20 add font-extrabold md:pt-20 '> Add Your <br /> <span className='own font-extrabold '> Own Products </span></h1>
 
-            <form className='pt-16 addproducts flex flex-col w-[70%] mx-auto  ' >
-            <input required className='mb-3  inputfields ' type="text" placeholder='Give your products photo url'/>
-                <input required className='mb-3 inputfields ' type="text" placeholder='Type your Products Name'/>
-                <input required className='mb-3  inputfields ' type="text" placeholder='Type your Products Price'/>
-                <input required className=' inputfields ' type="text" placeholder='Type your company Name/Supplier Name' />
-                <input required className='mt-3  inputfields  ' type="number" placeholder='products quantity' />
-                <textarea required className='mt-3  inputfields ' rows="5" cols="50" name="comment" form="usrform">
-                    products discreption...</textarea>
 
+
+            <form onSubmit={hanedelsubmit} className='pt-16 addproducts flex flex-col w-[70%] mx-auto  ' >
+            <input required className='mb-3  inputfields ' name='img' type="text" placeholder='Give your products photo url'/>
+                <input required className='mb-3 inputfields' name='Name' type="text" placeholder='Type your Products Name'/>
+                <input required className='mb-3  inputfields' name='price' type="text" placeholder='Type your Products Price'/>
+                <input required className=' inputfields ' type="text" name='supplierName' placeholder='Type your company Name/Supplier Name' />
+                <input required className='mt-3  inputfields ' name='quantity' type="number" placeholder='products quantity' />
+                <input className='h-10 inputfields' placeholder="products description" type="text" name='description'   />
                 <input className='mt-3 subbutton' type="submit" placeholder='submit' />
             </form>
 
