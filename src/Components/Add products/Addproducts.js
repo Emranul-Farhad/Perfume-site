@@ -17,7 +17,6 @@ const Addproducts = () => {
               description: event.target.description.value
             }
 
-        console.log(event.target.img.value,);
         const url = `http://localhost:8000/product`
         console.log(url);
         fetch(url, {
@@ -29,7 +28,7 @@ const Addproducts = () => {
         })
             .then(response => response.json(data))
             .then(data => {
-                console.log('Success:', data);
+                
             })
     }
 
