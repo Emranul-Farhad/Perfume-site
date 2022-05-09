@@ -8,6 +8,8 @@ import Home from './Components/HomePage/Home/Home';
 import Login from './Components/Login/Login';
 import Manages from './Components/Manages/Manages';
 import Footer from './Footerpage/Footer';
+import Require from './Require/Require';
+import MyProducts from './Components/My products/MyProducts';
 
 
 function App() {
@@ -17,8 +19,9 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
-        <Route path='/Add-products' element={<Addproducts></Addproducts>} ></Route>
-        <Route path='/Manage' element={<Manages></Manages>} ></Route>
+        <Route path='/Add-products' element={ <Require> <Addproducts></Addproducts> </Require> } ></Route>
+        <Route path='/Manage' element={ <Require> <Manages></Manages> </Require> } ></Route>
+        <Route path='/My-products' element={ <Require> <MyProducts></MyProducts> </Require> } ></Route>
         <Route path='/login' element={<Login></Login>} ></Route>
       </Routes>
       <Footer></Footer>
