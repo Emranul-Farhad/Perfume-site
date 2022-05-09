@@ -8,6 +8,7 @@ import {MdProductionQuantityLimits} from 'react-icons/md'
 import Hero from '../Heropart/Hero';
 import Home from '../Home/Home';
 import Products from '../Products/Products';
+import { signOut } from 'firebase/auth';
 
 
 
@@ -18,6 +19,10 @@ const Nav = () => {
     const [user] = useAuthState(auth)
     const [show, setShow] = useState(null);
     const [profile, setProfile] = useState(false);
+
+    const logout = () => {
+        signOut(auth);
+      };
 
     return (
         <>
@@ -56,7 +61,7 @@ const Nav = () => {
 
                                 {
 
-                                    user ? <button className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700  font-bold text-2xl text-white mx-10 tracking-normal " > <BsBoxArrowLeft></BsBoxArrowLeft> </button> :
+                                    user ? <button onClick={logout} className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700  font-bold text-2xl text-white mx-10 tracking-normal " > <BsBoxArrowLeft></BsBoxArrowLeft> </button> :
                                         <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/login'> Login </NavLink>
 
                                 }
@@ -137,13 +142,13 @@ const Nav = () => {
                                 <li className="flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center">
                                     <div className="flex items-center">
 
-                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/Aboubt-us'> About Us </NavLink>
+                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/Aboubt-us'></NavLink>
                                     </div>
                                 </li>
                                 <li className="flex md:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center">
                                     <div className="flex items-center">
                                         {/* <span className="ml-2 font-bold">Performance</span> */}
-                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/Doctors'> Doctors </NavLink>
+                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/Doctors'>  </NavLink>
                                     </div>
                                 </li>
                                 <li className="border-b border-gray-300 flex md:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
@@ -340,7 +345,7 @@ const Nav = () => {
                                                             </svg> */}
                                                         </div>
                                                         {/* <p className="text-white xl:text-base  text-base ml-3">Deliverables</p> */}
-                                                        {  user ? <button>  <BsBoxArrowLeft></BsBoxArrowLeft>  </button> :
+                                                        {  user ? <button onClick={logout} >  <BsBoxArrowLeft></BsBoxArrowLeft>  </button> :
                                                         <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/login'> Login </NavLink>
                                                         }
                                                     </div>
