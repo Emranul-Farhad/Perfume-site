@@ -48,7 +48,6 @@ const Details = () => {
 			url,
 			{
 				headers: {
-					// "content-type": "application/json",
                     'Content-Type': 'application/json'
 					
 				},
@@ -62,7 +61,7 @@ const Details = () => {
 				if (data.modifiedCount > 0) {
 					event.target.reset()
 					setSingelProduct({ ...singelproduct, quantity: + singelproduct.quantity + quantity })
-					toast.success(`${quantity} more car added to stock.`)
+					toast.success(`${quantity}  products added to stock.`)
 				}
 			})
 	}
@@ -81,15 +80,16 @@ const Details = () => {
                         <div className="xl:w-2/6 lg:w-2/5 w-80 lg:block hidden">
                             <img className="w-full" alt="" src={singelproduct?.img} />
                         </div>
-                        <div className="lg:hidden">
-                            <img className="w-full" alt="" src={singelproduct?.img} />
-                        </div>
+                        
                         <div className="xl:w-2/5 lg:w-1/2 lg:ml-6 lg:mt-0 mt-6">
                           
 
                             <div>
-                                <p className="xl:pr-48 text-base lg:leading-tight leading-normal dark:text-gray-300 text-gray-800 mt-7">
-                                    {singelproduct?.description}
+                            <p className="xl:pr-48 text-base lg:leading-tight leading-normal dark:text-gray-300 text-gray-800 ">
+                                  Name :  {singelproduct?.Name}
+                                </p>
+                                <p className="xl:pr-48 text-base lg:leading-tight leading-normal dark:text-gray-300 text-gray-800 mt-3">
+                                Sescription : {singelproduct?.description}
                                 </p>
                                 <p className="text-base leading-4 mt-2 text-gray-400">
                                     Product id: {singelproduct?._id}
@@ -137,11 +137,11 @@ const Details = () => {
                                         type="number"
                                         name="quantity"
                                         min={0}
-                                        className="h-10  rounded dark:bg-slate-500"
+                                        className="h-10  rounded inputfields"
                                         id="addItem"
                                     />
                                     <input
-                                        className="bg-[#ff5722] py-2 cursor-pointer mt-4 rounded"
+                                        className="inputfields py-2 cursor-pointer mt-4 rounded"
                                         type="submit"
                                         value="Add to stock"
                                     />

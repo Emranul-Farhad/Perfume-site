@@ -3,10 +3,6 @@ import './Addproducts.css'
 
 
 
-
-
-
-
 const Addproducts = () => {
 
     const hanedelsubmit = event => {

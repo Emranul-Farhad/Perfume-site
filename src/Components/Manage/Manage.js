@@ -1,9 +1,16 @@
 import React from 'react';
 import {AiFillDelete} from 'react-icons/ai'
-const Manage = (props) => {
-    console.log(props);
-    const {img, price, Name} = props.manage
+import {AiFillEye} from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom';
 
+
+
+
+const Manage = (props) => {
+    const {img, price, Name, _id,} = props.manage
+	const {delet} = props
+
+	const navigate = useNavigate()
 
     return (
 		<div className='pt-5'>
@@ -26,27 +33,18 @@ const Manage = (props) => {
 
 				</div>
 			</div>
-			<dir className="flex lg:w-1/4 py-2 px-8 lg:py-0 justify-between items-center  text-xl mt-2 lg:mt-0 dark:text-white lg:flex-col ">
-				{/* <Link
-					className="mb-4"
-					state={{ from: location }}
-					to={`/review/${_id}`}
-				>
-					<MdPreview />
-				</Link> */}
+			<div className="flex lg:w-1/4 py-2 px-8 lg:py-0 justify-between items-center  text-xl mt-2 lg:mt-0 dark:text-white lg:flex-col ">
+			
 
-				<button >
+				<button onClick={()=> delet(_id)} >
 					<AiFillDelete></AiFillDelete>
 				</button>
-{/* 
-				<Link
-					className="mt-4"
-					to={"/edit-car/" + _id}
-					state={{ from: location }}
-				>
-					<MdEdit />
-				</Link> */}
-			</dir>
+
+				<button onClick={()=> navigate(`/My-products/${_id}`)} >
+					<AiFillEye></AiFillEye>
+				</button>
+
+			</div>
 		</div>
         </div>
 		</div>

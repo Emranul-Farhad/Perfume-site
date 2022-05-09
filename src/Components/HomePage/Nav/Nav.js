@@ -53,18 +53,27 @@ const Nav = () => {
 
                                 <NavLink className=" font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal " to='/'> Home </NavLink>
 
+                            { user && 
+                            <> 
+
                                 <Link className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal" to='/Manage'> Manage</Link>
 
                                 <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal" to='/Add-products'>Add products</NavLink>
 
+                               
+                                 
                                 <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-7 tracking-normal " to='/My-products'>My products </NavLink>
+                                
+                              </>
+                           }
+                                
 
                                 {
-
                                     user ? <button onClick={logout} className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700  font-bold text-2xl text-white mx-10 tracking-normal " > <BsBoxArrowLeft></BsBoxArrowLeft> </button> :
                                         <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/login'> Login </NavLink>
 
                                 }
+
                                 {/* <li className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal ">Products</li>
                                 <li className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mr-10 tracking-normal">Performance</li>
                                 <li className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">Deliverables</li> */}

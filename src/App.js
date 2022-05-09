@@ -26,7 +26,7 @@ function App() {
         <Route path='/Manage' element={ <Require> <Manages></Manages> </Require> } ></Route>
         <Route path='/My-products' element={ <Require> <MyProducts></MyProducts> </Require> } ></Route>
         <Route path='/login' element={<Login></Login>} ></Route>
-        <Route path='/My-products/:id' element={<Details></Details>} ></Route>
+        <Route path='/My-products/:id' element={ <Require> <Details></Details> </Require> } ></Route>
       </Routes>
       
       <Footer></Footer>
