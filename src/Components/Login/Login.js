@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css'
-import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase key/Fire';
 import toast from 'react-hot-toast';
+import Loading from '../../Loading/Loading';
 
 
 
@@ -12,6 +13,14 @@ import toast from 'react-hot-toast';
 
 const Login = () => {
 
+// sign in with google
+const [signInWithGoogle, googleuser, googleloading, googleerror] = useSignInWithGoogle(auth);
+
+if(googleloading){
+    <loading></loading>
+}
+
+// sign in with email and passwords
     const navigate = useNavigate()
     const [approve , setApprove] = useState(false)
     const [errors, setError] = useState("")
@@ -23,6 +32,9 @@ const Login = () => {
         user,
         loading,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+
+    // 
 
      const [Email , setEmaiL] = useState("")
      const [PassworD , setPasswords] = useState("")
@@ -96,7 +108,7 @@ const Login = () => {
     let fromL = locationLog.state?.from?.pathname || "/";
   
 
-    if (users) {
+    if (users || googleuser ) {
         toast.success('welcome back', {id : "login"} )
       navigate(fromL, { replace: true })
     }
@@ -124,13 +136,14 @@ const Login = () => {
 
 
 
+
+
     return (
         <div className='mt-20'>
            
 
-            <div className='d-flex justify-content-center loginMain'>
-
-         
+           { loading? <Loading></Loading> :
+           <div className='d-flex justify-content-center loginMain'>
                 <div className="main">
                     <input type="checkbox" id="chk" aria-hidden="true" />
 
@@ -141,10 +154,15 @@ const Login = () => {
                             <input onBlur={getpass} type="password" name="pswd" placeholder="Password" required />
                             <input onBlur={confirmpass} type="password" name="txt" placeholder="Confirm Password" required />                         
                             <p style={{ color: 'red' }} > {errors} </p>
+                            {
+                                googleerror && <p> {error.message} </p>
+                            }
                             <button className='loginButton' >Sign up</button>
                         </form>
+
 {/* google sign in */}
-                        <button className='mb-3 googlesignin'>Sign with google</button>
+
+                        <button onClick={()=>signInWithGoogle()} className='mb-3 googlesignin'>Sign with google</button>
 
                     </div>
 
@@ -163,8 +181,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-
-           <button>  </button>
+            }
            
         </div>
 
