@@ -40,9 +40,9 @@ const Manage = (props) => {
 					<AiFillDelete></AiFillDelete>
 				</button>
 
-				<button onClick={()=> navigate(`/My-products/${_id}`)} >
+				 <button onClick={()=> navigate(`/My-products/${_id}`)} >
 					<AiFillEye></AiFillEye>
-				</button>
+				</button> 
 
 			</div>
 		</div>
