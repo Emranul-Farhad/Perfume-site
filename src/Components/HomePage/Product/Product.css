@@ -41,8 +41,8 @@ a
     align-items: center;
     justify-content: center;
     height: 300px;
-    padding: 50px;
-    background: #f0f0f0;
+    padding: 10px;
+    background: white;
 }
 
 .product-tumb img {

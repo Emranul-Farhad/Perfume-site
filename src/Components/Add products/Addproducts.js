@@ -3,45 +3,20 @@ import React from 'react';
 
 const Addproducts = () => {
 
-    return (
 
-        <div className='pt-16'>
-            <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname">First Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name.."/>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.."/>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Country</label>
-      </div>
-      <div class="col-75">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit"/>
-    </div>
-  </form>
+    
+    return (
+        <div className='mt-16' >
+            <form className='pt-16 addproducts flex flex-col w-[70%] mx-auto  ' >
+            <input className='mb-3' type="text" placeholder='Give your products photo url'/>
+                <input className='mb-3' type="text" placeholder='Type your Products Name'/>
+                <input className='mb-3' type="text" placeholder='Type your Products Price'/>
+                <input type="text" placeholder='Type your company Name/Supplier Name' />
+                <input className='mt-3' type="number" placeholder='products quantity' />
+                <textarea className='mt-3' rows="5" cols="50" name="comment" form="usrform">
+                    products discreption...</textarea>
+            </form>
+
         </div>
     );
 };

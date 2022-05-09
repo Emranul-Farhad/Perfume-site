@@ -6,7 +6,7 @@ const Manage = (props) => {
 
 
     return (
-        <div className='mb-3 mx-5 justify-center justify-items-center'>
+        <div className='mb-3 mx-auto w-[80%] justify-center justify-items-center'>
             <div className="bg-slate-200 w-[95%] lg:w-5/6  flex flex-col lg:flex-row lg:items-center lg:justify-between rounded-2xl">
 			<div className="flex justify-between lg:w-3/4 px-4 py-2">
 				<img

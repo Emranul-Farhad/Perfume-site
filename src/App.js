@@ -7,6 +7,7 @@ import Addproducts from './Components/Add products/Addproducts';
 import Home from './Components/HomePage/Home/Home';
 import Login from './Components/Login/Login';
 import Manages from './Components/Manages/Manages';
+import Footer from './Footerpage/Footer';
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
         <Route path='/Add-products' element={<Addproducts></Addproducts>} ></Route>
         <Route path='/Manage' element={<Manages></Manages>} ></Route>
         <Route path='/login' element={<Login></Login>} ></Route>
-
       </Routes>
+      <Footer></Footer>
 
     </div>
   );
