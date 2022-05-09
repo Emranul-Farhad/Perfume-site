@@ -14,26 +14,26 @@ const Footer = () => {
 			<div className="row">
 				<div className="col-6 col-lg">
 					<div className="pb-10">
-						<h3 className="text-muted mb-5 mb-lg-7 font-size-4">Products</h3>
+						<h3 className="text-muted mb-5 mb-lg-7 font-size-4">Collections</h3>
 
 						<div className="d-flex flex-column font-size-3 font-weight-bold">
-																				<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Pro Templates</Link>
-															<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Free Templates</Link>
-															<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Developer6669</Link>
+																				<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3"> spring collections</Link>
+															<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">winter collections</Link>
+															<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Summer collections</Link>
 																	</div>
 					</div>
 				</div>
 
 				<div className="col-6 col-lg">
 					<div className="pb-10">
-						<h3 className="text-muted mb-5 mb-lg-7 font-size-4">Learn</h3>
+						<h3 className="text-muted mb-5 mb-lg-7 font-size-4">Products</h3>
 
 						<div className="d-flex flex-column font-size-3 font-weight-bold">
-													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">All Tutorials</Link>
-													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Metronic Tutorials</Link>
-													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Keen Tutorials</Link>
-													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Blog &amp; News</Link>
-													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Hire Experts</Link>
+													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Nail products</Link>
+													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Hair products</Link>
+													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">skine tone</Link>
+													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Facewash &amp; Mackup</Link>
+													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Nose &amp; Eye products  </Link>
 											</div>
 					</div>
 				</div>
@@ -77,10 +77,10 @@ const Footer = () => {
 									<img src="https://developer6669.com/Projects/assets/images/icons/social-media/twitter.svg" data-lazy-src="https://developer6669.com/Projects/assets/images/icons/social-media/twitter.svg" className="w-20px mr-4 loaded" alt=""/>
 									Twitter
 								</Link>
-													<Link to="" className="d-flex align-items-center text-center text-dark-60 text-hover-primary py-2 py-lg-3">
+													{/* <Link to="" className="d-flex align-items-center text-center text-dark-60 text-hover-primary py-2 py-lg-3">
 									<img src="https://developer6669.com/Projects/assets/images/icons/social-media/dribbble.svg" data-lazy-src="https://developer6669.com/Projects/assets/images/icons/social-media/dribbble.svg" className="w-20px mr-4 loaded" alt=""/>
 									Dribbble
-								</Link>
+								</Link> */}
 													<Link to="" className="d-flex align-items-center text-center text-dark-60 text-hover-primary py-2 py-lg-3">
 									<img src="https://developer6669.com/Projects/assets/images/icons/social-media/instagram.svg" className="w-20px mr-4 loaded"  data-lazy-src="https://developer6669.com/Projects/assets/images/icons/social-media/instagram.svg" alt=""/>
 									Instagram
@@ -112,21 +112,6 @@ const Footer = () => {
 
 				</div>
 
-				{/* <div className="d-flex flex-column flex-md-row align-items-center justify-content-center order-1 order-md-2 mb-5 mb-md-0">
-					<div className="font-size-2 font-weight-bold text-dark-60 mb-5 mb-md-0">
-						Secured Payment by <Link to=""target="_blank" className="text-dark-50 text-hover-primary">2Checkout</Link> with:
-					</div>
-
-					<div className="ml-4">
-						<img src="https://developer6669.com/Projects/assets/images/icons/credit/paypal.svg" data-lazy-src="https://developer6669.com/Projects/assets/images/icons/credit/paypal.svg" alt="" className="h-20px mr-2 rounded-sm loaded"/>
-
-						<img src="https://developer6669.com/Projects/assets/images/icons/credit/visa.svg" data-lazy-src="https://keenthemes.com/images/payment-methods/light/visa.svg" alt="" className="h-20px mr-2 rounded-sm loaded"/>
-
-						<img src="https://developer6669.com/Projects/assets/images/icons/credit/mastercard.svg" data-lazy-src="https://developer6669.com/Projects/assets/images/icons/credit/mastercard.svg" alt="" className="h-20px mr-2 rounded-sm loaded"/>
-
-						<img src="https://developer6669.com/Projects/assets/images/icons/credit/americanexpress.svg" data-lazy-src="https://developer6669.com/Projects/assets/images/icons/credit/americanexpress.svg" alt="" className="h-20px rounded-sm loaded"/>
-					</div>
-				</div> */}
 			</div>
 		</div>
 	</div>
