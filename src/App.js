@@ -10,13 +10,15 @@ import Manages from './Components/Manages/Manages';
 import Footer from './Footerpage/Footer';
 import Require from './Require/Require';
 import MyProducts from './Components/My products/MyProducts';
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
   return (
     <div className="App">
       <Nav></Nav>
-
+      <Toaster   position="top-right"
+  reverseOrder={false}></Toaster>
       <Routes>
         <Route path='/' element={<Home></Home>} ></Route>
         <Route path='/Add-products' element={ <Require> <Addproducts></Addproducts> </Require> } ></Route>

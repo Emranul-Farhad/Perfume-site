@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './Login.css'
 import { useCreateUserWithEmailAndPassword, useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-
 import { useLocation, useNavigate } from 'react-router-dom';
-// import Loader from '../../Loader/Loader';
-import toast from 'react-hot-toast';
 import auth from '../../Firebase key/Fire';
-// import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
+
 
 
 
@@ -99,7 +97,7 @@ const Login = () => {
   
 
     if (users) {
-        toast.success('Successfully login done', {id : "login"} )
+        toast.success('welcome back', {id : "login"} )
       navigate(fromL, { replace: true })
     }
 
@@ -120,7 +118,7 @@ const Login = () => {
            return toast.error('input your email' , {id : 'resetEmailinput'})
         }
         await sendPasswordResetEmail(Email);
-        toast.success('Email send')
+        toast.success('send')
     }
     
 
