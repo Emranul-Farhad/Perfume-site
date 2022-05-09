@@ -6,7 +6,7 @@ import Customhook from '../../../Custom hooks/Customhook';
 
 const ProductsHalfs = () => {
   const  [products, setProducts] = Customhook()
-  console.log(products);
+//   console.log(products);
 
 
     return (
