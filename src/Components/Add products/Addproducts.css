@@ -17,16 +17,16 @@
 
 }
 
-.inputfield {
+.inputfields{
   border: none;
-  border: 2px solid #FFA24E;
+  border: 2px solid #FFA24E !important;
   border-radius: 5px;
 }
 
 .subbutton{
-  border: 2px solid rgba(255, 0, 0, 0.322);
-  background-color: #ff804e;
-  width: 100px;
-  padding: 10px 10px;
-  border-radius: 10px;
+  border: 2px solid rgba(255, 0, 0, 0.322) !important;
+  background-color: #ff804e !important;
+  width: 100px !important;
+  padding: 10px 10px !important;
+  border-radius: 10px !important;
 }

@@ -66,8 +66,8 @@ const Login = () => {
   }
 
     const signuphandel = event => {
-        if(password.length < 5){
-            return alert("hba na")
+        if(password.length < 7){
+            return alert("password must be 8 character")
         }
         event.preventDefault()
         if (password !== conpass) {
@@ -86,10 +86,12 @@ const Login = () => {
 
     const EmailLogin = event => {
         setEmaiL(event.target.value)
+        console.log(setEmaiL);
     }
 
     const PassLogin = event => {
         setPasswords(event.target.value)
+        console.log(setPasswords);
     }
 
     const locationLog = useLocation()
@@ -104,7 +106,7 @@ const Login = () => {
     
     const handelLogin = (event) => {
         event.preventDefault()
-        if(PassworD === ''){
+        if(PassworD === ""){
             setError('must need passwords')
         }
         else { 
@@ -125,7 +127,7 @@ const Login = () => {
 
 
     return (
-        <div>
+        <div className='mt-20'>
            
 
             <div className='d-flex justify-content-center loginMain'>
@@ -150,12 +152,12 @@ const Login = () => {
                             <label for="chk" aria-hidden="true">Login</label>
                             <input onBlur={EmailLogin} type="email" name="email" placeholder="Email" required />
                             <input onBlur={PassLogin}  type="password" name="pswd" placeholder="Password" required />  
-                           <div className='forget'> <p onClick={ forgetPassword} >forget passwords</p> </div>
+                           <div className='forget'> <p onClick={forgetPassword} >forget passwords</p> </div>
                             <p style={{ color: 'red' }} > {errors} </p>
                             {
                                 error && <p>  {error.message} </p> 
                             } 
-                            <button>Login</button>
+                            <button className='loginButton' >Login</button>
                         </form>
                     </div>
                 </div>
