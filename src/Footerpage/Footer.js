@@ -56,7 +56,7 @@ const Footer = () => {
 						<h3 className="text-muted mb-5 mb-lg-7 font-size-4">General</h3>
 
 						<div className="d-flex flex-column font-size-3 font-weight-bold">
-													<Link to="/Manage" className="text-dark-60 text-hover-primary py-2 py-lg-3">License Terms</Link>
+													<Link to="/Manage" className="text-dark-60 text-hover-primary py-2 py-lg-3 ">License Terms</Link>
 													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Privacy Policy</Link>
 													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Terms &amp; Conditions</Link>
 													<Link to=""className="text-dark-60 text-hover-primary py-2 py-lg-3">Refund Policy</Link>
@@ -101,13 +101,13 @@ const Footer = () => {
 			<div className="d-flex flex-column flex-md-row align-items-center justify-content-center justify-content-md-between">
 				<div className="d-flex align-items-center mr-md-2 order-2 order-md-1">
 
-					<Link to='/' className="mr-3 mr-md-6 text-dark-60">
+					<Link to='/' className="mr-3 mr-md-6 text-dark-60 brand">
 						{/* <img alt="logo" src="https://developer6669.com/Projects/assets/images/logo/developer6669.png" className="h-20px h-md-25px"/> */}
                         Fashion's Time
 					</Link>
 
 					<span className="font-size-2 font-weight-bold text-dark-60 pt-1" href="https://developer6669.com">
-						© 2022  Emranul Forhad
+						&copy; {new Date().getFullYear()} Emranul Forhad
 					</span>
 
 				</div>

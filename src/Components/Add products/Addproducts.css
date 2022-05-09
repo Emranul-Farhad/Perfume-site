@@ -1,4 +1,32 @@
-.addproducts{
+/* .addproducts{
   display: flex;
   flex-direction: column;
+} */
+
+.own{
+  color: #fa7899;
+  font-size: 2rem;
+  margin-left: 100px;
+}
+
+.add{
+  color: #ff9a41;
+  font-size: 2rem;
+  margin-right: 20px;
+  font-weight: 800;
+
+}
+
+.inputfield {
+  border: none;
+  border: 2px solid #FFA24E;
+  border-radius: 5px;
+}
+
+.subbutton{
+  border: 2px solid rgba(255, 0, 0, 0.322);
+  background-color: #ff804e;
+  width: 100px;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
