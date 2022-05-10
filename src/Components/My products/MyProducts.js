@@ -60,7 +60,8 @@ const MyProducts = () => {
 
     return (
         <div className='pt-20'>
-            <p>fdsffhffhg</p>
+            <p className='own' >My Products :- {userwise.length} </p>
+            
             {
                 userwise.map(pro => <Myproduct pro={pro} deletes={deletebutton} ></Myproduct>)
             }
