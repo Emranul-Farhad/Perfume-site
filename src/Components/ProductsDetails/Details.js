@@ -9,7 +9,7 @@ const Details = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        const url = `http://localhost:8000/product/${id}`
+        const url = `https://secure-chamber-07199.herokuapp.com/product/${id}`
         console.log(url);
         fetch(url)
             .then(res => res.json())
@@ -17,54 +17,54 @@ const Details = () => {
     }, [id])
 
 
-   const handleDelivere = ()=> {
-       if(singelproduct.quantity === 0 ){
-         return  toast.error('cannot decrase value')
-       }
-     
-       const url = (`http://localhost:8000/productupdate/${id}`)
-       fetch(url)
-       .then(res => res.json())
-       .then(data => {
-           if(data.modifiedCount === 1 ){
-            setSingelProduct({
-                ...singelproduct, quantity: + singelproduct.quantity-1
+    const handleDelivere = () => {
+        if (singelproduct.quantity === 0) {
+            return toast.error('cannot decrase value')
+        }
+
+        const url = (`https://secure-chamber-07199.herokuapp.com/productupdate/${id}`)
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount === 1) {
+                    setSingelProduct({
+                        ...singelproduct, quantity: + singelproduct.quantity - 1
+                    })
+                }
             })
-           }
-       } )
-    
+
     }
 
 
     // update quantit
 
     const handleAddStock = (event) => {
-		event.preventDefault()
-		const quantity = +event.target.quantity.value
+        event.preventDefault()
+        const quantity = +event.target.quantity.value
         console.log(quantity);
-        const url = `http://localhost:8000/update/${singelproduct._id}`
+        const url = `https://secure-chamber-07199.herokuapp.com/update/${singelproduct._id}`
         console.log(url);
-		fetch(
-			url,
-			{
-				headers: {
+        fetch(
+            url,
+            {
+                headers: {
                     'Content-Type': 'application/json'
-					
-				},
-                body: JSON.stringify({quantity}),
-				method: "POST",
-			}
-		)
-		
-           .then (res => res.json())
-			.then((data) => {
-				if (data.modifiedCount > 0) {
-					event.target.reset()
-					setSingelProduct({ ...singelproduct, quantity: + singelproduct.quantity + quantity })
-					toast.success(`${quantity}  products added to stock.`)
-				}
-			})
-	}
+
+                },
+                body: JSON.stringify({ quantity }),
+                method: "POST",
+            }
+        )
+
+            .then(res => res.json())
+            .then((data) => {
+                if (data.modifiedCount > 0) {
+                    event.target.reset()
+                    setSingelProduct({ ...singelproduct, quantity: + singelproduct.quantity + quantity })
+                    toast.success(`${quantity}  products added to stock.`)
+                }
+            })
+    }
 
 
 
@@ -80,16 +80,16 @@ const Details = () => {
                         <div className="xl:w-2/6 lg:w-2/5 w-80 lg:block hidden">
                             <img className="w-full" alt="" src={singelproduct?.img} />
                         </div>
-                        
+
                         <div className="xl:w-2/5 lg:w-1/2 lg:ml-6 lg:mt-0 mt-6">
-                          
+
 
                             <div>
-                            <p className="xl:pr-48 text-base lg:leading-tight leading-normal dark:text-gray-300 text-gray-800 ">
-                                  Name :  {singelproduct?.Name}
+                                <p className="xl:pr-48 text-base lg:leading-tight leading-normal dark:text-gray-300 text-gray-800 ">
+                                    Name :  {singelproduct?.Name}
                                 </p>
                                 <p className="xl:pr-48 text-base lg:leading-tight leading-normal dark:text-gray-300 text-gray-800 mt-3">
-                                Sescription : {singelproduct?.description}
+                                    Sescription : {singelproduct?.description}
                                 </p>
                                 <p className="text-base leading-4 mt-2 text-gray-400">
                                     Product id: {singelproduct?._id}
@@ -125,7 +125,7 @@ const Details = () => {
                                 </div>
                                 <form
                                     className=" mt-6 py-2 px-6 rounded-lg  grid"
-                                onSubmit={handleAddStock}
+                                    onSubmit={handleAddStock}
                                 >
                                     <label
                                         htmlFor="stock"
