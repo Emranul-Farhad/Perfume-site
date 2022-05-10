@@ -13,6 +13,7 @@ import MyProducts from './Components/My products/MyProducts';
 import { Toaster } from 'react-hot-toast';
 import Details from './Components/ProductsDetails/Details';
 import Blogs from './Blogs/Blogs';
+import Notfound from './Notfound page/Notfound';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path='/login' element={<Login></Login>} ></Route>
         <Route path='/My-products/:id' element={ <Require> <Details></Details> </Require> } ></Route>
         <Route path='/blog' element={ <Blogs></Blogs> } ></Route>
+        <Route path='*' element={<Notfound></Notfound>} ></Route>
       </Routes>
       
       <Footer></Footer>

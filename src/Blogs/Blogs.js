@@ -5,7 +5,7 @@ import React from 'react';
 const Blogs = () => {
     return (
         
-        <div className='pt-20'>
+        <div className='pt-20 container '>
             <div class="accordion mt-16" id="accordionPanelsStayOpenExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="panelsStayOpen-headingOne">

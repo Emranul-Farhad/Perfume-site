@@ -7,17 +7,11 @@ import Manage from '../Manage/Manage';
 
 
 const Manages = () => {
-const [product, setProduct] = useState([])
+const [product, setProduct] = Customhook([])
 
-useEffect(()=> {
-    fetch('http://localhost:8000/product')
-    .then(res=>res.json())
-    .then(data => setProduct(data))
-},[])
 
 
 //    deleted part
-
  const deletebutton = id => {
      const procced = window.confirm('are you sure?')
      if(procced){
@@ -31,7 +25,7 @@ useEffect(()=> {
              const deleted = product.filter(pr=> pr._id !== id)
              setProduct(deleted)
              console.log(data);
-         })
+        })
      }
  }
 
