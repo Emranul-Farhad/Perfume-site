@@ -1,10 +1,13 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase key/Fire';
 import './Addproducts.css'
 
 
 
 const Addproducts = () => {
 
+    const [user] = useAuthState(auth)
     const hanedelsubmit = event => {
         console.log(event.target);
         event.preventDefault()
@@ -14,7 +17,8 @@ const Addproducts = () => {
              price: event.target.price.value , 
              supplierName: event.target.supplierName.value,
               quantity:event.target.quantity.value,
-              description: event.target.description.value
+              description: event.target.description.value,
+              email : event.target.email.value
             }
 
         const url = `http://localhost:8000/product`
@@ -44,7 +48,10 @@ const Addproducts = () => {
                 <input required className='mb-3  inputfields' name='price' type="text" placeholder='Type your Products Price'/>
                 <input required className=' inputfields ' type="text" name='supplierName' placeholder='Type your company Name/Supplier Name' />
                 <input required className='mt-3  inputfields ' name='quantity' type="number" placeholder='products quantity' />
-                <input className='h-10 inputfields' placeholder="products description" type="text" name='description'   />
+                <input className='h-10 inputfields' placeholder="products description" type="text" name='description'/>
+
+                <input  value={user?.email} readOnly className='h-10 inputfields' placeholder="email" type="email" name='email'/>
+
                 <input className='mt-3 subbutton' type="submit" placeholder='submit' />
             </form>
 
