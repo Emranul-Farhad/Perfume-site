@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase key/Fire';
 import toast from 'react-hot-toast';
 import Loading from '../../Loading/Loading';
+import axios from 'axios';
 
 
 
@@ -110,17 +111,22 @@ if(googleloading){
 
     if (users || googleuser ) {
         toast.success('welcome back', {id : "login"} )
-      navigate(fromL, { replace: true })
+      
     }
 
+    // handel login
     
-    const handelLogin = (event) => {
+    const handelLogin = async(event) => {
         event.preventDefault()
         if(PassworD === ""){
             setError('must need passwords')
         }
         else { 
-        signInWithEmailAndPassword(Email , PassworD)
+         await signInWithEmailAndPassword(Email , PassworD)
+        const {data} = await axios.post('http://localhost:8000/login', {Email} )
+        localStorage.setItem('accessToken' , data.accessToken )
+        console.log(data);
+        navigate(fromL, { replace: true })
         }
     }
 

@@ -66,9 +66,11 @@ const Nav = () => {
                                 
                               </>
                            }
-                                
+                               
+                               
+                               <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-4 tracking-normal " to='/blog'>Blogs </NavLink>
 
-                                {
+                         {
                                     user ? <button onClick={logout} className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700  font-bold text-2xl text-white mx-10 tracking-normal " > <BsBoxArrowLeft></BsBoxArrowLeft> </button> :
                                         <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/login'> Login </NavLink>
 
@@ -96,11 +98,8 @@ const Nav = () => {
                                 </div>
                                 <div className="w-full h-full flex">
                                     <div className="w-32 h-full flex items-center justify-center border-gray-700 border-r text-gray-400 cursor-pointer">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-bell" width={28} height={28} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                            <path stroke="none" d="M0 0h24v24H0z" />
-                                            <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
-                                            <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
-                                        </svg>
+                                       
+                                       
                                     </div>
                                     <div className="w-full flex items-center justify-end relative cursor-pointer" onClick={() => setProfile(!profile)}>
                                         {profile && (

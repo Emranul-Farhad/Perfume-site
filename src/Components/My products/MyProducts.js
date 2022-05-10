@@ -17,18 +17,22 @@ useEffect(() => {
         console.log(email);
         const url = `http://localhost:8000/product?email=${email}`
         console.log(url);
-        const {data} = await axios.get(url);
+        const {data} = await axios.get(url,{
+            headers : {
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        } );
         setUserwise(data)
     }
     usersubmit()
-}, [])
+}, [user])
 
 
     return (
         <div className='pt-20'>
-            <p>fff</p>
+          <p>fdsffhffhg</p>
             {
-                userwise.map(pro =>  <p> order {pro.Name} </p> )
+                userwise.map(pro =>  <p> order :{pro.Name} </p> )
             }
         </div>
     );
