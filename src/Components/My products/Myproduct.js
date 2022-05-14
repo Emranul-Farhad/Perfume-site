@@ -19,7 +19,7 @@ const Myproduct = (props) => {
     <div className="bg-slate-200 w-[95%] lg:w-5/6  flex flex-col lg:flex-row lg:items-center lg:justify-between rounded-2xl">
     <div className="flex justify-between lg:w-3/4 px-4 py-2">
         <img
-            className="lg:w-20 w-20  rounded-2xl"
+            className="lg:w-20 w-20 rounded-2xl shadow-2xl"
             src={img}
             alt=""
         />

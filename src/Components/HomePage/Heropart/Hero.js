@@ -1,6 +1,5 @@
 import React from 'react';
 import './Hero.css'
-import leptop from '../../../images/a.jpg'
 
 
 

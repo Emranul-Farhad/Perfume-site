@@ -66,36 +66,32 @@ const Nav = () => {
                                 
                               </>
                            }
-                               
-                               
+                                                      
                                <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-4 tracking-normal " to='/blog'>Blogs </NavLink>
 
-                         {
-                                    user ? <button onClick={logout} className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700  font-bold text-2xl text-white mx-10 tracking-normal " > <BsBoxArrowLeft></BsBoxArrowLeft> </button> :
+                               <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-[75px] tracking-normal " 
+                               to='/skintips'>skin Tips </NavLink>
+
+                               <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-[0px] tracking-normal " to='/hairtips'>Hair Tips </NavLink>
+
+
+                              {
+                                    user ? <button onClick={logout} className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700  font-bold text-2xl text-white mx-[90px] tracking-normal " > <BsBoxArrowLeft></BsBoxArrowLeft> </button> :
                                         <NavLink className="font-bold cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/login'> Login </NavLink>
 
                                 }
 
-                                {/* <li className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal ">Products</li>
-                                <li className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mr-10 tracking-normal">Performance</li>
-                                <li className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white tracking-normal">Deliverables</li> */}
+                                
+
+                              
                             </ul>
 
                         </div>
                         <div className="h-full xl:flex items-center justify-end hidden">
                             <div className="w-full h-full flex items-center">
-                                <div className="w-full pr-12 h-full flex items-center border-gray-700 border-r">
-                                    <div className="relative w-full">
-                                        <div className="text-white absolute ml-3 inset-0 m-auto w-4 h-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width={16} height={16} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                <circle cx={10} cy={10} r={7} />
-                                                <line x1={21} y1={21} x2={15} y2={15} />
-                                            </svg>
-                                        </div>
-                                        <input className="border border-gray-700 focus:outline-none focus:border-indigo-700 w-56 rounded text-sm text-white bg-gray-700 pl-8 py-2" type="text" placeholder="Search" />
-                                    </div>
-                                </div>
+                               
+                                       
+                                    
                                 <div className="w-full h-full flex">
                                     <div className="w-32 h-full flex items-center justify-center border-gray-700 border-r text-gray-400 cursor-pointer">
                                        
@@ -328,31 +324,43 @@ const Nav = () => {
                                                 <li className="text-white pt-8">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-white">
-                                                            {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-compass" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                                <polyline points="8 16 10 10 16 8 14 14 8 16" />
-                                                                <circle cx={12} cy={12} r={9} />
-                                                            </svg> */}
+                                                            
                                                          <button className=' font-bold'>   <MdProductionQuantityLimits></MdProductionQuantityLimits></button>
 
-                                                        </div>
-                                                        {/* <p className="text-white xl:text-base  text-base ml-3">Performance</p> */}
-                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/blogs'>blogs </NavLink>
+                                                        </div>                                           
+                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/blogs'>blogs 
+                                                        </NavLink>
                                                     </div>
                                                 </li>
                                             </a>
+                                            <li className="text-white pt-8">
+                                                    <div className="flex items-center">
+                                                        <div className="w-6 h-6 md:w-8 md:h-8 text-white">
+                                                            
+                                                         <button className=' font-bold'>   <MdProductionQuantityLimits></MdProductionQuantityLimits></button>
+
+                                                        </div>                                           
+                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/hairtips'>Hair Tips 
+                                                        </NavLink>
+                                                    </div>
+                                                </li>
+                                                <li className="text-white pt-8">
+                                                    <div className="flex items-center">
+                                                        <div className="w-6 h-6 md:w-8 md:h-8 text-white">
+                                                            
+                                                         <button className=' font-bold'>   <MdProductionQuantityLimits></MdProductionQuantityLimits></button>
+
+                                                        </div>                                           
+                                                        <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/skintips'>Skin Tips 
+                                                        </NavLink>
+                                                    </div>
+                                                </li>
                                             <li className="text-white pt-8 cursor-pointer">
                                                 <div className="flex items-center justify-between">
                                                     <div className="flex items-center">
                                                         <div className="w-6 h-6 md:w-8 md:h-8 text-white">
-                                                            {/* <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-code" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                                                <path stroke="none" d="M0 0h24v24H0z" />
-                                                                <polyline points="7 8 3 12 7 16" />
-                                                                <polyline points="17 8 21 12 17 16" />
-                                                                <line x1={14} y1={4} x2={10} y2={20} />
-                                                            </svg> */}
-                                                        </div>
-                                                        {/* <p className="text-white xl:text-base  text-base ml-3">Deliverables</p> */}
+                                                           
+                                                        </div>                           
                                                         {  user ? <button onClick={logout} >  <BsBoxArrowLeft></BsBoxArrowLeft>  </button> :
                                                         <NavLink className="cursor-pointer h-full flex items-center hover:text-indigo-700 text-sm text-white mx-10 tracking-normal " to='/login'> Login </NavLink>
                                                         }
@@ -362,7 +370,7 @@ const Nav = () => {
                                         </ul>
                                     </div>
                                     <div className="w-full pt-4">
-                                        <div className="flex justify-center mb-4 w-full">
+                                        {/* <div className="flex justify-center mb-4 w-full">
                                             <div className="relative w-full">
                                                 <div className="text-gray-500 absolute ml-4 inset-0 m-auto w-4 h-4">
                                                     <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-search" width={16} height={16} viewBox="0 0 24 24" strokeWidth={1} stroke="#A0AEC0" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -373,7 +381,7 @@ const Nav = () => {
                                                 </div>
                                                 <input className="bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 bg-gray-700 pl-10 py-2" type="text" placeholder="Search" />
                                             </div>
-                                        </div>
+                                        </div> */}
                                         <div className="border-t border-gray-700">
                                             <div className="w-full flex items-center justify-between pt-1">
                                                 <div className="flex items-center">
